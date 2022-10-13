@@ -1,0 +1,39 @@
+.new-activity__controls {
+  padding-block-end: 2rem;
+}
+
+.new-activity__control {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: 1.5rem;
+}
+
+.new-activity__control label {
+  padding-block: 0.5rem;
+  width: fit-content;
+  font-size: 1.4rem;
+  color: var(--lgt-grey-color);
+  border-radius: 50px;
+}
+
+.new-activity__control input {
+  padding-block: 1.2rem;
+  padding-inline: 1rem;
+  background-color: var(--med-blue-color);
+  color-scheme: dark;
+}
+
+@media (min-width: 62rem) {
+  .new-activity__control {
+    padding-block-end: 5rem;
+  }
+  .new-activity__control label {
+    font-size: 3rem;
+  }
+
+  .new-activity__control input {
+    padding-block: 2.5rem;
+    padding-inline: 1.5rem;
+    font-size: 2rem;
+  }
+}

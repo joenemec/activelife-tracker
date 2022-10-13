@@ -1,0 +1,19 @@
+.activity-date {
+  padding-block: 0.5rem;
+  padding-inline: 3rem;
+  line-height: 1.4;
+  text-align: center;
+  background-color: var(--lgt-blue-color);
+  color: var(--lgt-grey-color);
+  border-radius: 5px;
+}
+
+.activity-date__month,
+.activity-date__year {
+  font-weight: 300;
+}
+
+.activity-date__day {
+  font-weight: 600;
+  font-size: 2.5rem;
+}

@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-block: 1.5rem;
+  background-color: transparent;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  max-width: 92%;
+}
+
+.header .container:last-child {
+  justify-content: space-evenly;
+}
+
+.header__text {
+  font-weight: 300;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.header__text span {
+  font-weight: 700;
+}
+
+@media (min-width: 62rem) {
+  .header {
+    min-height: 100vh;
+    min-width: 200px;
+  }
+
+  .header .container {
+    flex-direction: column;
+    gap: 10rem;
+    min-height: 30vh;
+  }
+
+  .header__text {
+    position: absolute;
+    right: 6rem;
+    font-size: 2.5rem;
+  }
+}

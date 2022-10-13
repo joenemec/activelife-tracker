@@ -1,0 +1,27 @@
+.activity__submit {
+  padding-block-start: 2rem;
+}
+
+.activity__submit .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background: var(--form-btn-color);
+}
+
+@media (min-width: 62rem) {
+  .activity__submit .container {
+    justify-content: space-between;
+  }
+  button {
+    width: 300px;
+    height: 70px;
+  }
+}

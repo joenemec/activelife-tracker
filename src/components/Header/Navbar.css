@@ -1,0 +1,66 @@
+.navbar {
+  position: fixed;
+  bottom: 1.5rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar .container {
+  padding-block: 1rem;
+  background-color: var(--dark-blue-color);
+  border-radius: 50px;
+  box-shadow: 0 0 15px 2px rgb(0, 0, 0, 0.15);
+}
+
+.container > .icon {
+  display: flex;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.icon__add {
+  padding: 0.8rem;
+  background: var(--nav-btn-color);
+  border-radius: 50%;
+  box-shadow: 0 1px 4px 1px rgba(59, 59, 59, 0.726);
+}
+
+.icon__add ion-icon {
+  font-size: 4rem;
+  color: var(--white-color);
+}
+
+:is(.icon__add):is(:hover, :focus) {
+  transform: scale(1.1);
+}
+
+:is(.icon__chart ion-icon, .icon__list ion-icon) {
+  font-size: 3rem;
+  color: var(--lgt-grey-color);
+  transition: 0.15s ease-in-out;
+}
+
+:is(.icon__chart ion-icon, .icon__list ion-icon):is(:hover, :focus) {
+  color: var(--grey-hover-color);
+  transform: scale(1.2);
+}
+
+@media (min-width: 62rem) {
+  .navbar {
+    all: unset;
+  }
+
+  .navbar .container {
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    box-shadow: none;
+  }
+
+  .icon__add {
+    padding: 2rem;
+  }
+
+  :is(.icon__chart ion-icon, .icon__list ion-icon) {
+    font-size: 4rem;
+  }
+}
