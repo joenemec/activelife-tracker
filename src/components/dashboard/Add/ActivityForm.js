@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import DisplayContext from "../../../DisplayContext";
+
 import ActivitySubmit from "./ActivitySubmit";
 import "./ActivityForm.css";
 
 const ActivityForm = (props) => {
+  const { chartInfo, setChartInfo } = useContext(DisplayContext);
   const [enteredActivity, setEnteredActivity] = useState("");
   const [enteredTime, setEnteredTime] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -35,6 +38,7 @@ const ActivityForm = (props) => {
     setEnteredActivity("");
     setEnteredTime("");
     setEnteredDate("");
+    setChartInfo(chartInfo.push(enteredTime));
   };
 
   return (

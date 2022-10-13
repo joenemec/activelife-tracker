@@ -50,7 +50,10 @@ export const DisplayProvider = ({ children }) => {
     },
   ];
 
+  let allTime = allActivities.map((time) => time.time);
+
   const [activities, setActivities] = useState(allActivities);
+  const [chartInfo, setChartInfo] = useState(allTime);
 
   return (
     <DisplayContext.Provider
@@ -63,6 +66,8 @@ export const DisplayProvider = ({ children }) => {
         addDisplayHistory,
         activities,
         setActivities,
+        chartInfo,
+        setChartInfo,
       }}
     >
       {children}

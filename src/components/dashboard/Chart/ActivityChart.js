@@ -6,6 +6,7 @@ import "./ActivityChart.css";
 
 const ActivityChart = ({ chartItems }) => {
   const { displayChart } = useContext(DisplayContext);
+  // console.log(chartItems.datasets[0].data);
   return <>{displayChart ? <Doughnut data={chartItems} /> : null}</>;
 };
 

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import ActivityChart from "./Chart/ActivityChart";
 import DisplayContext from "../../DisplayContext";
-import ActivityTotal from "./Total/ActivityTotal";
+
 import Activities from "./History/Activities";
 import ActivityNew from "./Add/ActivityNew";
 import CurrentDate from "./Date/CurrentDate";
@@ -14,6 +14,7 @@ const Dashboard = () => {
     displayHistory,
     activities,
     setActivities,
+    chartInfo,
   } = useContext(DisplayContext);
 
   const addActivityHandler = (activity) => {
@@ -52,13 +53,10 @@ const Dashboard = () => {
     datasets: [
       {
         label: "Minutes",
-        data: activities.map((activity) => activity.time),
+        data: chartInfo,
       },
     ],
   });
-
-  console.log(activities);
-  // console.log(chartData);
 
   return (
     <main className="dashboard">
@@ -69,7 +67,6 @@ const Dashboard = () => {
         onAddActivity={addActivityHandler}
       />
       <Activities displayComponent={displayHistory} items={activities} />
-      {/* <ActivityTotal displayComponent={displayTotal} items={activities} /> */}
     </main>
   );
 };
