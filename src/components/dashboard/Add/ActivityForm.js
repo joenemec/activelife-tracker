@@ -38,7 +38,7 @@ const ActivityForm = (props) => {
     setEnteredActivity("");
     setEnteredTime("");
     setEnteredDate("");
-    setChartInfo(chartInfo.push(enteredTime));
+    setChartInfo([...chartInfo, parseInt(enteredTime)]);
   };
 
   return (
