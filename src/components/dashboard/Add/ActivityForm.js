@@ -38,7 +38,40 @@ const ActivityForm = (props) => {
     setEnteredActivity("");
     setEnteredTime("");
     setEnteredDate("");
-    setChartInfo(chartInfo.push(enteredTime));
+
+    const expr = activityData.day;
+    switch (expr) {
+      case 1:
+        setChartInfo({ ...chartInfo, monday: chartInfo.monday + parseInt(enteredTime) });
+        break;
+
+      case 2:
+        setChartInfo({ ...chartInfo, tuesday: chartInfo.tuesday + parseInt(enteredTime) });
+        break;
+
+      case 3:
+        setChartInfo({ ...chartInfo, wednesday: chartInfo.wednesday + parseInt(enteredTime) });
+        break;
+
+      case 4:
+        setChartInfo({ ...chartInfo, thursday: chartInfo.thursday + parseInt(enteredTime) });
+        break;
+
+      case 5:
+        setChartInfo({ ...chartInfo, friday: chartInfo.friday + parseInt(enteredTime) });
+        break;
+
+      case 6:
+        setChartInfo({ ...chartInfo, saturday: chartInfo.saturday + parseInt(enteredTime) });
+        break;
+
+      case 0:
+        setChartInfo({ ...chartInfo, sunday: chartInfo.sunday + parseInt(enteredTime) });
+        break;
+
+      default:
+        console.log('Error, no valid data');
+    }
   };
 
   return (

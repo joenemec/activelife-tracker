@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ActivityChart from "./Chart/ActivityChart";
 import DisplayContext from "../../DisplayContext";
 
@@ -17,46 +17,59 @@ const Dashboard = () => {
     chartInfo,
   } = useContext(DisplayContext);
 
-  const addActivityHandler = (activity) => {
-    setActivities((prevActivity) => {
-      return [activity, ...prevActivity];
-    });
-  };
-
   const weekDays = [
-    { day: "Sun", num: 0 },
-    { day: "Mon", num: 1 },
-    { day: "Tue", num: 2 },
-    { day: "Wed", num: 3 },
-    { day: "Thu", num: 4 },
-    { day: "Fri", num: 5 },
-    { day: "Sat", num: 6 },
+    { day: "Mon", num: 0 },
+    { day: "Tue", num: 1 },
+    { day: "Wed", num: 2 },
+    { day: "Thu", num: 3 },
+    { day: "Fri", num: 4 },
+    { day: "Sat", num: 5 },
+    { day: "Sun", num: 6 },
   ];
 
-  const months = [
-    { day: "Jan", num: 0 },
-    { day: "Feb", num: 1 },
-    { day: "Mar", num: 2 },
-    { day: "Apr", num: 3 },
-    { day: "May", num: 4 },
-    { day: "Jun", num: 5 },
-    { day: "Jul", num: 6 },
-    { day: "Aug", num: 7 },
-    { day: "Sep", num: 8 },
-    { day: "Oct", num: 9 },
-    { day: "Nov", num: 10 },
-    { day: "Dec", num: 11 },
-  ];
+  // const months = [
+  //   { day: "Jan", num: 0 },
+  //   { day: "Feb", num: 1 },
+  //   { day: "Mar", num: 2 },
+  //   { day: "Apr", num: 3 },
+  //   { day: "May", num: 4 },
+  //   { day: "Jun", num: 5 },
+  //   { day: "Jul", num: 6 },
+  //   { day: "Aug", num: 7 },
+  //   { day: "Sep", num: 8 },
+  //   { day: "Oct", num: 9 },
+  //   { day: "Nov", num: 10 },
+  //   { day: "Dec", num: 11 },
+  // ];
 
   const [chartData, setChartData] = useState({
     labels: weekDays.map((a) => a.day),
     datasets: [
       {
         label: "Minutes",
-        data: chartInfo,
+        data: '',
       },
     ],
   });
+
+  const addActivityHandler = (activity) => {
+    setActivities((prevActivity) => {
+      return [activity, ...prevActivity];
+    });
+  }
+
+  useEffect(() => {
+    setChartData({
+      labels: weekDays.map((a) => a.day),
+      datasets: [
+        {
+          label: "Minutes",
+          data: [chartInfo.monday, chartInfo.tuesday, chartInfo.wednesday, chartInfo.thursday, chartInfo.friday, chartInfo.saturday, chartInfo.sunday],
+        },
+      ],
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chartInfo]);
 
   return (
     <main className="dashboard">

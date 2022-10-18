@@ -50,10 +50,18 @@ export const DisplayProvider = ({ children }) => {
     },
   ];
 
-  let allTime = allActivities.map((time) => time.time);
+  const previewTime = {
+    monday: 20,
+    tuesday: 35,
+    wednesday: 45,
+    thursday: 0,
+    friday: 0,
+    saturday: 0,
+    sunday: 0,
+  }
 
   const [activities, setActivities] = useState(allActivities);
-  const [chartInfo, setChartInfo] = useState(allTime);
+  const [chartInfo, setChartInfo] = useState(previewTime);
 
   return (
     <DisplayContext.Provider
