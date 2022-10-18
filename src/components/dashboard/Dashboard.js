@@ -18,13 +18,13 @@ const Dashboard = () => {
   } = useContext(DisplayContext);
 
   const weekDays = [
-    { day: "Sun", num: 0 },
-    { day: "Mon", num: 1 },
-    { day: "Tue", num: 2 },
-    { day: "Wed", num: 3 },
-    { day: "Thu", num: 4 },
-    { day: "Fri", num: 5 },
-    { day: "Sat", num: 6 },
+    { day: "Mon", num: 0 },
+    { day: "Tue", num: 1 },
+    { day: "Wed", num: 2 },
+    { day: "Thu", num: 3 },
+    { day: "Fri", num: 4 },
+    { day: "Sat", num: 5 },
+    { day: "Sun", num: 6 },
   ];
 
   // const months = [
@@ -64,7 +64,7 @@ const Dashboard = () => {
       datasets: [
         {
           label: "Minutes",
-          data: chartInfo,
+          data: [chartInfo.monday, chartInfo.tuesday, chartInfo.wednesday, chartInfo.thursday, chartInfo.friday, chartInfo.saturday, chartInfo.sunday],
         },
       ],
     });
