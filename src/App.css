@@ -66,9 +66,10 @@ button {
 
 @media (min-width: 62rem) {
   #root {
-    display: grid;
+    display: flex;
+    /* display: grid;
     grid-template-columns: auto 1fr;
-    /* place-content: center; */
+    place-content: center; */
   }
 
   button {

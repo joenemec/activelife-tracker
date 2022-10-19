@@ -55,6 +55,7 @@ export const DisplayProvider = ({ children }) => {
     february: 0,
     march: 0,
     april: 0,
+    may: 0,
     june: 0,
     july: 0,
     august: 35,
