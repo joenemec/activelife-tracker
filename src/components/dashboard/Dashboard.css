@@ -1,7 +1,6 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   gap: 1rem;
   margin-block-start: 2rem;
   margin-block-end: 12rem;
@@ -12,7 +11,9 @@
 
 @media (min-width: 62rem) {
   .dashboard {
-    min-width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 100%;
     margin-block-start: 10rem;
   }
 }

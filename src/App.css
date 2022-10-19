@@ -14,6 +14,8 @@
   --nav-btn-color: linear-gradient(#ffa992, #df6d76);
   --form-btn-color: linear-gradient(#ffa992, #fd0d92);
   --time-color: linear-gradient(#ffa992, #fd0d92);
+  /* SHADOWS */
+  --shadow-1: 0 0 4px 0 rgb(0, 0, 0, 0.25);
 }
 
 * {
@@ -66,6 +68,7 @@ button {
   #root {
     display: grid;
     grid-template-columns: auto 1fr;
+    /* place-content: center; */
   }
 
   button {

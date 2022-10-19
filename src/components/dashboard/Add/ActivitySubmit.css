@@ -18,10 +18,11 @@ button {
 
 @media (min-width: 62rem) {
   .activity__submit .container {
-    justify-content: space-between;
+    justify-content: space-evenly;
+    /* gap: 1rem; */
   }
   button {
-    width: 300px;
+    min-width: 250px;
     height: 70px;
   }
 }

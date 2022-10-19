@@ -1,7 +1,7 @@
 .activity-item {
   background: var(--dark-blue-color);
   border-radius: 20px;
-  box-shadow: 0 0 4px 0 rgb(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-1);
 }
 
 .activity-item__card {
@@ -37,6 +37,29 @@
 
 @media (min-width: 62rem) {
   .activity-item {
-    /* min-width: 500px; */
+    min-width: 600px;
+  }
+
+  .activity-item__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2rem;
+    padding-inline: 3.5rem;
+  }
+
+  .activity-item__description {
+    gap: 1rem;
+  }
+
+  .activity-item__description h4 {
+    font-size: 2rem;
+    gap: 3rem;
+  }
+
+  .activity-item__time {
+    padding-block: 1rem;
+    padding-inline: 2.5rem;
+    font-size: 1.8rem;
   }
 }

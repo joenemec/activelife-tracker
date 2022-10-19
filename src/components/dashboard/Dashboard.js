@@ -1,7 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ActivityChart from "./Chart/ActivityChart";
 import DisplayContext from "../../DisplayContext";
-
 import Activities from "./History/Activities";
 import ActivityNew from "./Add/ActivityNew";
 import CurrentDate from "./Date/CurrentDate";
@@ -16,22 +15,6 @@ const Dashboard = () => {
     setActivities,
     chartInfo,
   } = useContext(DisplayContext);
-
-  const addActivityHandler = (activity) => {
-    setActivities((prevActivity) => {
-      return [activity, ...prevActivity];
-    });
-  };
-
-  const weekDays = [
-    { day: "Sun", num: 0 },
-    { day: "Mon", num: 1 },
-    { day: "Tue", num: 2 },
-    { day: "Wed", num: 3 },
-    { day: "Thu", num: 4 },
-    { day: "Fri", num: 5 },
-    { day: "Sat", num: 6 },
-  ];
 
   const months = [
     { day: "Jan", num: 0 },
@@ -48,15 +31,46 @@ const Dashboard = () => {
     { day: "Dec", num: 11 },
   ];
 
+  const addActivityHandler = (activity) => {
+    setActivities((prevActivity) => {
+      return [activity, ...prevActivity];
+    });
+  };
+
   const [chartData, setChartData] = useState({
-    labels: weekDays.map((a) => a.day),
+    labels: months.map((a) => a.day),
     datasets: [
       {
         label: "Minutes",
-        data: chartInfo,
+        data: "",
       },
     ],
   });
+
+  useEffect(() => {
+    setChartData({
+      labels: months.map((a) => a.day),
+      datasets: [
+        {
+          label: "Minutes",
+          data: [
+            chartInfo.january,
+            chartInfo.february,
+            chartInfo.march,
+            chartInfo.april,
+            chartInfo.may,
+            chartInfo.june,
+            chartInfo.july,
+            chartInfo.august,
+            chartInfo.september,
+            chartInfo.october,
+            chartInfo.november,
+            chartInfo.december,
+          ],
+        },
+      ],
+    });
+  }, [chartInfo]);
 
   return (
     <main className="dashboard">

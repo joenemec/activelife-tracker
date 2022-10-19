@@ -26,14 +26,17 @@
 @media (min-width: 62rem) {
   .new-activity__control {
     padding-block-end: 5rem;
+    justify-content: center;
   }
+
   .new-activity__control label {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .new-activity__control input {
     padding-block: 2.5rem;
     padding-inline: 1.5rem;
     font-size: 2rem;
+    min-width: 600px;
   }
 }

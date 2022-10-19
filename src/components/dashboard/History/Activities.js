@@ -1,15 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import DisplayContext from "../../../DisplayContext";
 import ActivityItem from "./ActivityItem";
 import "./Activities.css";
 
 const Activities = ({ items }) => {
   const { displayHistory } = useContext(DisplayContext);
-
-  // console.log(activities.map((activity) => activity.time));
-  // console.log(
-  //   chartData.datasets.map((data) => console.log(data.data.push(activities)))
-  // );
 
   return (
     <>

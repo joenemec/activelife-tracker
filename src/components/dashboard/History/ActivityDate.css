@@ -5,6 +5,7 @@
   text-align: center;
   background-color: var(--lgt-blue-color);
   color: var(--lgt-grey-color);
+  box-shadow: var(--shadow-1);
   border-radius: 5px;
 }
 
@@ -16,4 +17,20 @@
 .activity-date__day {
   font-weight: 600;
   font-size: 2.5rem;
+}
+
+@media (min-width: 62rem) {
+  .activity-date {
+    padding-block: 1rem;
+    padding-inline: 3.5rem;
+  }
+
+  .activity-date__month,
+  .activity-date__year {
+    font-size: 2rem;
+  }
+
+  .activity-date__day {
+    font-size: 3rem;
+  }
 }

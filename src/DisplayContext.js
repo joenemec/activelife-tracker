@@ -50,10 +50,22 @@ export const DisplayProvider = ({ children }) => {
     },
   ];
 
-  let allTime = allActivities.map((time) => time.time);
+  const previewTime = {
+    january: 0,
+    february: 0,
+    march: 0,
+    april: 0,
+    june: 0,
+    july: 0,
+    august: 35,
+    september: 45,
+    october: 20,
+    november: 0,
+    december: 0,
+  };
 
   const [activities, setActivities] = useState(allActivities);
-  const [chartInfo, setChartInfo] = useState(allTime);
+  const [chartInfo, setChartInfo] = useState(previewTime);
 
   return (
     <DisplayContext.Provider
