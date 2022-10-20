@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/activelife-tracker/static/css/main.b7e6d305.css",
+    "main.js": "/activelife-tracker/static/js/main.08b4b089.js",
+    "static/js/787.6459ac24.chunk.js": "/activelife-tracker/static/js/787.6459ac24.chunk.js",
+    "static/media/desktop-img.png": "/activelife-tracker/static/media/desktop-img.b4ae138c1c4858f4f192.png",
+    "index.html": "/activelife-tracker/index.html",
+    "main.b7e6d305.css.map": "/activelife-tracker/static/css/main.b7e6d305.css.map",
+    "main.08b4b089.js.map": "/activelife-tracker/static/js/main.08b4b089.js.map",
+    "787.6459ac24.chunk.js.map": "/activelife-tracker/static/js/787.6459ac24.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7e6d305.css",
+    "static/js/main.08b4b089.js"
+  ]
+}
