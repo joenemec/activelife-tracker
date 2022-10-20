@@ -5,6 +5,7 @@ import Activities from "./History/Activities";
 import ActivityNew from "./Add/ActivityNew";
 import CurrentDate from "./Date/CurrentDate";
 import "./Dashboard.css";
+import IMAGE1 from "../../images/desktop-img.png";
 
 const Dashboard = () => {
   const {

@@ -7,7 +7,6 @@ const ActivitySubmit = () => {
     <section className="activity__submit">
       <div className="container">
         <button type="submit">Add Activity</button>
-        <button type="button">Cancel</button>
       </div>
     </section>
   );

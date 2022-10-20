@@ -16,7 +16,6 @@ const Activities = ({ items }) => {
               type={activity.type}
               time={activity.time}
               date={activity.date}
-              day={activity.day}
               month={activity.month}
             />
           ))}

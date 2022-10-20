@@ -1,14 +1,11 @@
 .header {
-  display: flex;
-  padding-block: 1.5rem;
+  height: 15vh;
+  margin-block-start: 1rem;
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-inline: auto;
-  max-width: 92%;
 }
 
 .header .container:last-child {
@@ -18,7 +15,7 @@
 .header__text {
   font-weight: 300;
   font-size: 3rem;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .header__text span {
@@ -26,20 +23,7 @@
 }
 
 @media (min-width: 62rem) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    width: 400px;
-  }
-
-  .header .container {
-    flex-direction: column;
-    gap: 10rem;
-    min-height: 30vh;
-  }
-
   .header__text {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }

@@ -6,7 +6,15 @@ import "./ActivityChart.css";
 
 const ActivityChart = ({ chartItems }) => {
   const { displayChart } = useContext(DisplayContext);
-  return <div>{displayChart ? <Doughnut data={chartItems} /> : null}</div>;
+  return (
+    <>
+      {displayChart ? (
+        <div className="chart">
+          <Doughnut data={chartItems} />
+        </div>
+      ) : null}
+    </>
+  );
 };
 
 export default ActivityChart;

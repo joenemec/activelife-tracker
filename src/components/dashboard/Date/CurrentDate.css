@@ -1,4 +1,6 @@
 .current__date {
+  padding-block-end: 2rem;
+  width: fit-content;
   line-height: 1.4;
 }
 
@@ -18,16 +20,19 @@
   }
 
   .date__listed {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 @media (min-width: 62rem) {
-  .date__text {
-    font-size: 2.2rem;
+  .current__date {
+    width: 90%;
+    margin-inline: auto;
   }
+}
 
-  .date__listed {
-    font-size: 3.5rem;
+@media (min-width: 80rem) {
+  .current__date {
+    width: 35%;
   }
 }

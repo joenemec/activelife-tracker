@@ -37,7 +37,6 @@
 
 @media (min-width: 62rem) {
   .activity-item {
-    min-width: 600px;
   }
 
   .activity-item__card {

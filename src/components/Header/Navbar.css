@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   bottom: 1.5rem;
-  width: 100%;
+  width: 95%;
   z-index: 2;
 }
 
@@ -47,20 +47,29 @@
 
 @media (min-width: 62rem) {
   .navbar {
-    all: unset;
+    width: 55%;
+    bottom: 2rem;
   }
 
   .navbar .container {
-    padding-inline: 2rem;
-    padding-block: 3rem;
-    box-shadow: none;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .icon__add {
+    padding: 1.5rem;
   }
 
-  .icon__add {
-    padding: 2rem;
+  .icon__add ion-icon {
+    font-size: 5rem;
+    color: var(--white-color);
   }
 
   :is(.icon__chart ion-icon, .icon__list ion-icon) {
     font-size: 4rem;
+    color: var(--lgt-grey-color);
+    transition: 0.15s ease-in-out;
   }
 }

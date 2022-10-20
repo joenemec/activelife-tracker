@@ -28,7 +28,6 @@ const ActivityForm = (props) => {
       type: enteredActivity,
       time: +enteredTime,
       date: new Date(enteredDate + "T00:00:00"),
-      day: new Date(enteredDate + "T00:00:00").getDay(),
       month: new Date(enteredDate + "T00:00:00").getMonth(),
     };
 

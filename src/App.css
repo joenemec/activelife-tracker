@@ -30,10 +30,8 @@ html {
 }
 
 #root {
-  background-image: url(/src/images/blur-bg.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: -23rem;
+  max-width: 85%;
+  margin-inline: auto;
 }
 
 body {
@@ -41,13 +39,13 @@ body {
   line-height: 1.7;
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  background-color: var(--darker-blue-color);
-  /* overflow: hidden; */
-}
-
-img {
-  width: 100%;
-  height: auto;
+  background: rgb(253, 13, 146);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 13, 146, 0.7) 1%,
+    rgba(47, 46, 65, 1) 15%
+  );
+  background-repeat: no-repeat;
 }
 
 input {
@@ -62,17 +60,4 @@ button {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-}
-
-@media (min-width: 62rem) {
-  #root {
-    display: flex;
-    /* display: grid;
-    grid-template-columns: auto 1fr;
-    place-content: center; */
-  }
-
-  button {
-    font-size: 2rem;
-  }
 }

@@ -29,7 +29,6 @@ export const DisplayProvider = ({ children }) => {
       type: "Jog",
       time: 20,
       date: new Date(2022, 9, 3),
-      day: new Date(2022, 9, 3).getDay(),
       month: new Date(2022, 9, 3).getMonth(),
     },
     {
@@ -37,7 +36,6 @@ export const DisplayProvider = ({ children }) => {
       type: "Swim",
       time: 45,
       date: new Date(2022, 8, 14),
-      day: new Date(2022, 8, 14).getDay(),
       month: new Date(2022, 8, 14).getMonth(),
     },
     {
@@ -45,7 +43,6 @@ export const DisplayProvider = ({ children }) => {
       type: "Cycle",
       time: 35,
       date: new Date(2022, 7, 23),
-      day: new Date(2022, 7, 23).getDay(),
       month: new Date(2022, 7, 23).getMonth(),
     },
   ];

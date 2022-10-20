@@ -10,19 +10,35 @@
 }
 
 button {
-  width: 200px;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  width: 100%;
   height: 40px;
   color: #fff;
   background: var(--form-btn-color);
 }
 
+@media (min-width: 50rem) {
+  .activity__submit .container {
+    margin-inline: auto;
+    max-width: 55%;
+  }
+}
+
 @media (min-width: 62rem) {
   .activity__submit .container {
     justify-content: space-evenly;
-    /* gap: 1rem; */
+    max-width: 80%;
+    margin-block-end: 15rem;
   }
+
   button {
-    min-width: 250px;
-    height: 70px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .activity__submit .container {
+    max-width: 35%;
   }
 }

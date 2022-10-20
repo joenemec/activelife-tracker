@@ -1,1 +1,18 @@
+.chart {
+  padding-block: 2rem;
+  border-radius: 50px;
+  margin-block-end: 10rem;
+}
 
+@media (min-width: 62rem) {
+  .chart {
+    max-width: 40%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 80rem) {
+  .chart {
+    max-width: 35%;
+    margin-inline: auto;
+  }
+}

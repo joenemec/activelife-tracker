@@ -14,11 +14,11 @@ const Header = ({
   return (
     <header className="header">
       <div className="container">
-        <h4 className="header__text">
+        <div className="header__text">
           <span>ACTIVE</span>LIFE
-        </h4>
+        </div>
+        <Navbar />
       </div>
-      <Navbar />
     </header>
   );
 };
